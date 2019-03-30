@@ -167,7 +167,7 @@ def sort_and_write_file(file_name):
 
 def main():
     start_year = int(sys.argv[1])
-    end_year = int(sys.argv[2])
+    end_year = int(sys.argv[2]) + 1
 
     unique_artists_file = 'data/unique-hot-100-artists-{}-{}.json'.format(
         start_year,
