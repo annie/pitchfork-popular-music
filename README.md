@@ -19,6 +19,7 @@ Albums are given scores out of 10. Genres were taken manually from the artists' 
 
 ### Top 10
 FWIW, Pitchfork classifies a 8.0+ album rating as "Best New Music".
+
 | Artist | Avg album score | Genre(s) |
 | :----- | :-------------: | :------- |
 | Kendrick Lamar | 9.00 | Hip Hop |
@@ -34,6 +35,7 @@ FWIW, Pitchfork classifies a 8.0+ album rating as "Best New Music".
 
 ### Bottom 10
 Unlike Rotten Tomatoes, Pitchfork doesn't have a "Certified Rotten"-type classification. I guess that's nice of them. They can still be pretty brutal though.
+
 | Artist | Avg album score | Genre(s) |
 | :----- | :-------------: | :------- |
 | Panic! At The Disco | 1.50 | Pop Rock |
