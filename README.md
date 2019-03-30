@@ -12,7 +12,10 @@ might have changed over time.
 - Has Pitchfork reviewed more/less popular music over the past decade?
 
 ## Findings
-**DISCLAIMER:** I am figuring out some data issues, so the results below are subject to change. The main problem is the inconsistency of my Wikipedia scraper - the logic for finding disambiguated artist pages and parsing the Discography section isn't robust enough. Working on this.
+**DISCLAIMER:** I am encountering some data scraping issues, specifically with
+fetching the correct Wikipedia pages for artists and parsing their discographies. As a
+result, ~2/3 of artists' average scores are showing up as 0. I'm working to fix this, so the
+results below are subject to change.
 
 ### Artist Rankings by Average Album Score (2008-2018)
 Albums are given scores out of 10. Genres were taken manually from the artists' Wikipedia pages.
@@ -88,6 +91,6 @@ I am a beginner in the world of statistics/data science, so I'm aware that there
 - Should I be looking at averages for all albums, or some other measure?
 
 ### Running the scripts
-As I wrote this code, I tested it by running the scripts for artists in 2008. My initial implementation naively rewrote all the CSV/JSON files for every run. That worked for a single year, but when I started trying to look at the whole decade, the script would often encounter some HTTP error and terminate early. Because I was overwriting and not appending to the files, nothing would get written during a failed run and I would have to restart.
+As I wrote this code, I tested the scripts by running them for artists in 2008. My initial implementation naively rewrote all the CSV/JSON files for every run. That worked for a single year, but when I started trying to look at the whole decade, the script would often encounter some HTTP error and terminate early. Because I was overwriting and not appending to the files, nothing would get written during a failed run and I would have to restart.
 
 The biggest bottleneck was fetching the reviews from Pitchfork. This step had the highest volume of individual requests. I realized I could change the script to append to a file if it already existed, and also to read the existing file to see which artists had not already been processed from the previous run(s). These simple changes allowed me to finally complete a list of aggregated album scores for all the artists fetched from Billboard.
